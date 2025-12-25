@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tablero Médico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💊</text></svg>">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>💊 Mi Tratamiento</h1>
+        
+        <div class="control-panel">
+            <button class="btn-master" onclick="calcularTodo()">CALCULAR TODO</button>
+            <p class="instrucciones">Pon la hora de tu última dosis y presiona el botón.</p>
+        </div>
+        
+        <div class="grid-container" id="contenedorTarjetas"></div>
+        
+        <br><br>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

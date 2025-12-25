@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #007bff;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --touch-size: 16px; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 15px;
+    color: var(--text-color);
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 10px 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* BOTON MAESTRO */
+.control-panel {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.btn-master {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    transition: transform 0.1s;
+}
+
+.btn-master:active {
+    transform: scale(0.96);
+    background-color: #0056b3;
+}
+
+.instrucciones {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* ESTRUCTURA */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-color);
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.frecuencia {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #666;
+    background: #eef2f5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* INPUTS */
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: var(--touch-size);
+    background-color: #fff;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none; 
+}
+
+/* RESULTADOS */
+.resultado-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #ccc;
+    display: none;
+}
+
+.res-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.res-fecha {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    line-height: 1.4;
+}
+
+/* ALERTA HOY */
+.alerta-hoy {
+    background-color: #ffebee !important;
+    border-left-color: #d32f2f !important;
+}
+
+.alerta-hoy .res-fecha {
+    color: #c62828;
+}
+
+.alerta-hoy .res-label {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* COLORES DECORATIVOS */
+.card:nth-child(1) { border-top-color: #ff5252; } /* Rojo */
+.card:nth-child(2) { border-top-color: #ffa726; } /* Naranja */
+.card:nth-child(3) { border-top-color: #ab47bc; } /* Morado */
+
+@media (max-width: 350px) {
+    .grid-container { grid-template-columns: 1fr; }
+    h1 { font-size: 1.3rem; }
+}
